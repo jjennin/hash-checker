@@ -1,19 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""Computes hashes of any file."""
+
 import hashlib
 import argparse
 
 
 def hashfile(input_file):
     """
-    Creates an MD5, SHA1 and SHA256 hash of any file.
+    Create an MD5, SHA1 and SHA256 hash of any file.
 
     This is useful if you have downloaded a file and need to compare the hash
-    values with the values published by the publisher, to ensure that it has
-    not been tampered with.
+    values with the values published by the publisher, to ensure that the file
+    has not been tampered with.
     """
-
     block_size = 2**20
     md5 = hashlib.md5()
     sha1 = hashlib.sha1()
